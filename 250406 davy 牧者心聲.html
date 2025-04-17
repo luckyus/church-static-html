@@ -1,0 +1,128 @@
+<style>
+	.a5-main {
+		font-family: Microsoft JhengHei, Arial, Helvetica, sans-serif;
+		font-size: 1.3em;
+		line-height: normal;
+		padding: 10px 20px 0;
+	}
+
+	.a5-main ul li {
+		/* line-height: 150%; */
+	}
+
+	.a5-main h4 {
+		margin-top: 20px;
+	}
+
+	.a5-flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.a5-header {
+		font-weight: bold;
+		font-size: 1.5em;
+	}
+
+	.a5-header-2nd {
+		margin-top: 0.2em;
+	}
+
+	.a5-pastor-ma {
+		font-size: 1em;
+		margin-top: 5px;
+	}
+
+	.a5-bold {
+		font-weight: bold;
+	}
+
+	.a5-alert-blue {
+		color: blue;
+	}
+
+	.a5-fontsize-small {
+		font-size: 0.8rem;
+	}
+
+	.a5-picture {
+		width: 140px;
+		height: 155px;
+		float: right;
+		margin-left: 10px;
+		margin-bottom: 10px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+
+	.a5-indent {
+		margin-left: 2em;
+	}
+
+	.a5-main ol li span:first-child {
+		font-weight: bold;
+	}
+
+	ol.a5 li {
+		line-height: normal;
+	}
+
+	ol.a5 li p:first-of-type {
+		margin-top: 5px;
+	}
+
+	blockquote {
+		border-left: .2rem solid #dadee4;
+		margin-left: 2rem;
+		padding: .4rem .8rem;
+	}
+
+	.davy {
+		background-image: url('data:image/jpeg;base64,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')
+	}
+</style>
+<meta charset="utf-8">
+<div class="a5-main">
+	<div class="a5-header a5-alert-blue a5-bold">
+		牧者心聲 — 從塵土到永恆的盼望<br />
+	</div>
+	<div class="a5-flex">
+		<div class="a5-pastor-ma">譚希文執事</div>
+		<div class="a5-fontsize-small">2025 年 04 月</div>
+	</div>
+	<div>
+		<p>
+			<img class="a5-picture davy" />
+		</p>
+	</div>
+	<div>
+		<p>
+			還記得二月底主日崇拜報告時，有機會在大堂與大家分享有關聖灰禮的意義，特別分享了從觀看星空到思想人類渺小的感動。當我們仰望浩瀚宇宙，再反觀自己的生命，大家會否也跟詩人的慨嘆：「人算甚麼，你竟顧念他！世人算甚麼，你竟眷顧他！」
+			(詩8：4) 一樣呢？
+		</p>
+		<p>
+			這段時間，我們接連送別了幾位親愛的弟兄姊妹。特別是我所認識較長時間的弟兄，感受更深。面對生命的逝去，我更深體會聖灰禮中「你本是塵土，仍要歸回塵土」（創3:19）的真義。我們的生命確實如塵土般脆弱短暫，若離開神的恩典，實在毫無價值可言。
+		</p>
+		<p>
+			但感謝主！正因我們本是塵土，神的救贖更顯寶貴。祂不僅用塵土造人，更賜下獨生子，使我們這卑微的器皿能成為「貴重的器皿，成為聖潔，合乎主用」（提後2:21）。主耶穌說：「因為離了我，你們就不能做什麼」（約15:5），但「在基督裡」，我們卻能活出永恆的價值。
+		</p>
+		<p>
+			親愛的弟兄姊妹，讓我們一起思想:-
+		</p>
+		<ol class="a5">
+			<li>
+				我們是否時常意識到自己生命的有限？
+			</li>
+			<li>
+				是否願意全然降服，讓神塑造我們這「塵土」成為合用的器皿？ 並讓神完全的去用你？
+			</li>
+			<li>
+				在短暫的人生中，我們最該追求的是甚麼？。
+			</li>
+		</ol>
+		<p>
+			願我們都能如保羅所勸勉：「所以，我親愛的弟兄們，你們務要堅固，不可動搖，常常竭力多做主工，因為你們知道，你們在主裏的勞苦不是徒然的。」（林前15:58）
+		</p>
+		<p class="a5-fontsize-small">(2025 年 04 月)</p>
+	</div>
+</div>

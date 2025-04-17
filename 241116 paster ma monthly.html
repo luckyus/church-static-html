@@ -1,0 +1,226 @@
+<style>
+    .a3-main {
+        font-family: Microsoft JhengHei, Arial, Helvetica, sans-serif;
+        font-size: 1.3em;
+        line-height: normal;
+        padding: 10px 20px 0;
+    }
+
+    .a3-main ul li {
+        /* line-height: 150%; */
+    }
+
+    .a3-main h4 {
+        margin-top: 20px;
+    }
+
+    .a3-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .a3-header {
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+
+    .a3-header-2nd {
+        margin-top: 0.2em;
+    }
+
+    .a3-pastor-ma {
+        font-size: 1em;
+        margin-top: 5px;
+    }
+
+    .a3-bold {
+        font-weight: bold;
+    }
+
+    .a3-alert-blue {
+        color: blue;
+    }
+
+    .a3-fontsize-small {
+        font-size: 0.8rem;
+    }
+
+    .a3-picture {
+        width: 133px;
+        height: 180px;
+        float: right;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .a3-indent {
+        margin-left: 2em;
+    }
+
+    .a3-main ol li span:first-child {
+        font-weight: bold;
+    }
+
+    ol.a>*+* {
+        margin-top: 10px;
+    }
+
+    ol.a li {
+        line-height: normal;
+    }
+
+    ol.a li p:first-of-type {
+        margin-top: 5px;
+    }
+
+    ol.sub-ol {
+        margin-left: 10px;
+    }
+
+    ol.sub-ol li:first-child {
+        margin-top: 10px;
+    }
+
+    blockquote {
+        border-left: .2rem solid #dadee4;
+        margin-left: 2rem;
+        padding: .4rem .8rem;
+    }
+
+    .ma {
+        background-image: url('data:image/jpeg;base64,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')
+    }
+</style>
+<meta charset="utf-8">
+<div class="a3-main">
+    <div class="a3-header a3-alert-blue a3-bold">
+        2025年教會發展思想方向：「土壤、空間及生命」<br />
+    </div>
+    <div class="a3-flex">
+        <div class="a3-pastor-ma">主任牧師馬志民牧師</div>
+        <div class="a3-fontsize-small">2024 年 11 月</div>
+    </div>
+    <div>
+        <p>
+            <img class="a3-picture ma" />
+        </p>
+    </div>
+    <div>
+        <p>
+            2024年合一堂經歷了各方面的挑戰，我們從疫情的打擊，重新召聚信徒：從疫情期間網絡視像崇拜，召聚信徒回堂與弟兄姊妹同心同在的敬拜上主；從網絡中交流分享、會議商議及祈禱探望，召聚大家能實體關心、彼此問安，肩並肩的同心事奉。然而，教會也面對另一種的離散，就是持續的移民潮的挑戰。當中有不少舉家移民，換言之，就是中年有經濟能力的父母，帶同青少年子女舉家移民，在海外升學及生活。信徒在移民過程之中，心中難免有不捨之情，同時，也觸發自身尋找宜安宜居生活的思想。環觀世界各國各地，試問何處才是真正的烏托邦？相信只要有主耶穌同在，抓緊永恆生命的確據，才能體會心中的天國與永恆的盼望。在信徒流散的日子，各單位堂積極地重新招聚信徒，培育信徒成為新一代的領袖，繼續在社會見證福音的大能，傳揚上主的真理。
+        </p>
+        <p>
+            2025年合一堂要思想的方向：<span style="color: purple;">「土壤、空間及生命」</span>。這三個名詞似乎關係不大，卻是對信徒成長與及教會的發展有一定的指向及幫助。
+        </p>
+        <ol class="a">
+            <li>
+                <b>「土壤」-- 準備一個適合孕育生命的環境</b>
+                <p>
+                    在2024年上半年有機會參加越南訪宣，與及七月份的泰國短宣，在行程中都留意當地的物產十分豐富，原因是東南亞的土壤及天氣十分適合農作物的生長。有當地的信徒分享，當地種什麼植物都可以繁茂生長，可見土壤肥沃，包含各樣適合植物生長的元素，使種子可以有百倍的收成。不少基督教機構調查報告，指出教會青少年流失率十分高，教會老年化（合一堂也不例外），意即教會參與的信徒平均年歲不斷提高。年青一代何去何從？疫情？升學？移民?可能解釋教會原有的青少年人數大幅下降。但我們要思想，教會以外仍有數以百萬計的青少年在各中、小學，大專生，與及在港工作的職場。為何我們未能帶領他們認識福音？在大專或公司職場，有不少機構或牧者，持續開設大專生查經班，或是職場的福音聚會，吸引不少青少年及初職研讀聖經，認識真理。而他們卻未有踏足教會，扎根於信仰群體，或是只趨向流連於某類型的教會。當然，筆者並不要合一堂模仿那一類型教會。
+                </p>
+                <p>
+                    我們要思想，教會是否有合適的土壤，讓不同的年齡層，或是不同背景的信徒，均可以在教會內健康的成長，得到合適的養分，令他們的屬靈生命得到足夠的營養，得以長大。教會要如何成為合適的土壤，這是教會需要認識自己的本位，同時，要看見種子的需要及成長必要的條件，為種子可以發芽，茁壯成長，作出合適的調整。是的，這種由本位走向以福音對象而設的思考模式，不是新穎的思想，是自古至今常有的，常言道：「福音不變，傳道應變」。我們要準備不同種類的土壤，學習彼此欣賞，彼此鼓勵，互相扶持。我們離開已習慣的安舒區思維，正是在世代傳承教會所需要面對的難關。
+                <ol class="a" type="A">
+                    <li>
+                        <b>為人生面對困難者預備攜手同行的土壤</b>
+                        <p>
+                            合一堂四個單堂近年已走出教會之外，透過社會服務接觸社區的生命。我們會見到教會之外，有不少市民都活在困苦之中，他們各個生命都面對不同程度的挑戰與困難，我們並不是要在他們的生命中，加上另一個信仰的枷鎖，而是讓他們知道，教會雖未必可以完全解決他們工作上、感情上或生活上的難處，但教會願意與他們同行，一起走過艱苦的路，以愛、以禱告，與他們同行。
+                        </p>
+                        <p>
+                            主耶穌在世傳道時，看見有患病多年的，有孤苦無依的，有被社會排斥的。主耶穌動了慈心，醫治他們，接納他們，給他們一個新的生活，並且讓他們看見上主的榮光，歸榮給上帝。面對這些人生苦澀，苦無出路的人，教會是否可以預備一個手攜手同行的土壤，使這些被邊緣的生命，面對岌岌可危的生命，受傷的心靈是否可以藉教會的同行，讓基督的恩手可包裹醫癒他們。
+                        </p>
+                    </li>
+                    <li>
+                        <b>為流徙的青少年人預備以愛為家的土壤</b>
+                        <p>
+                            今天青少年人因未找到合適的教會而流徙無定，甚至對自己的去留都有很多不定的因素。然而，他們在這期間極需要一個屬靈的家，讓他們可以獲得愛與關懷。教會是否可以成為這個可以讓青少年人留步，經歷愛的地方，教會不一定要HEA，卻是聆聽及關懷的地方。這屬靈的家是教會，並不是單指教堂的某個角落，而是教會的群體共處的地方，即是信的人聚在一處的意思。這個地方可以是某個願意開放的家庭，讓青少年可以聚在一起，可以分享分擔，一起發夢的地方。
+                        </p>
+                        <p>
+                            在這世代充滿<u>冷漠</u>，所謂事不關己，己不勞心，就算有心卻也不能改變事實，也出現了<u>無力感</u>。青少年對於自己的方向或理想（也許是神在他們身上的呼召）可能會感到<u>無奈</u>，<u>沒有出路</u>，甚至感到<u>被拒絕</u>，<u>不可行</u>。回想，今天教會的執事領袖，昔日都是在教會年幼成長，經歷過不同階段的考驗及磨練，但也有不少同儕因種種原因漸漸離開教會。因此，教會的年青一代也有不少新思維、新方向或新嘗試，都值得教會回應及了解，並且，以愛、以家接納一同分享及嘗試。使年青一代可以取得發展教會事工，領導教會的經驗，教會也因為新的思維新動力，可以擴闊教會的土壤，讓多元思維的年青人都可以植根教會之內，在信仰中一同的成長。
+                        </p>
+                    </li>
+                    <li>
+                        <b>為失去人生方向者預備真理導引的土壤</b>
+                        <p>
+                            香港有不少人在大環境急速轉變，而失去了人生方向，自己找不到立足點，也看不見前面的方向。只求日過一日，未能為將來打算。俗話「今朝有酒今朝醉」，讓大家都只為眼前的事與物作出短視的抉擇，也不願意為將來作委身，更枉論為教會未來發展作出承擔。然而，聖經以弗所書5:15-17教導我們在末世時，更要愛惜光陰把握時機，謹慎生活作個有智慧的人，目的要將生命放在上主永恆的事物之中。
+                        </p>
+                        <p>
+                            教會要幫助這些世上迷糊生活、失去方向的人，要他們明白上主的旨意。所以，教會應加強聖經真理的研習與教導，讓信徒可以鞏固他們的信心，可以抓緊上主的呼召及心意，而慕道者更需要真理光照他們的內心，使他們可以在死蔭的黑暗中看見基督的真光。教會可以推行門徒訓練建立信徒持續研讀聖經的習慣、啟發課程可以幫助慕道者認識信仰與及信徒生命的本質。講壇信息可以加強信徒生活指引的教導，他們得力在生活中為主作見證。
+                        </p>
+                    </li>
+                </ol>
+                </p>
+            </li>
+            <li>
+                <b>「空間」-- 設立適切的空間讓幼苗成長</b>
+                <p>
+                    「空間」並不指地方使用的問題，乃是指給予不同群體有其發展的空間與機會。還記得在越南訪宣時，行車經過橡膠園，看見數以千計的橡膠樹栽種排列整齊，無論橫直斜，都十分整齊，不偏不倚，原來是農民要保持橡膠樹之間有足夠的空間，一方面讓樹木可以得到均衡的養分，有足夠的空間可以成長；另一方面，就是讓農夫可以有空間走過橡膠樹，每天收取橡膠。同樣地，教會可有足夠均衡的空間，讓信徒可以有足夠空間來成長，或是太過擠迫，影響了成長的機會。同時，我們也要給予空間或機會，讓信徒可以將信仰實踐出來，按恩賜參與事奉，成為結果纍纍的生命。
+                </p>
+                <p>
+                    正如先前提出空間並不指地方或房間，乃是在思想及成長上給予空間，有不少是事物會影響了空間的寬廣，例如固守的舊習慣，只是約定俗成，我們可會更新思考其必然性，或是在不違真理的原則下，可以作新的嘗試。正如一個幼兒學行路，我們必需讓他自己去嘗試，也許有跌跌碰碰的時候，有痛得大聲哭嚎的時候，但這是成長必經的階段。若父母過份的保護，不肯放手讓小孩嘗試，成長必然受到打折。父母可以從旁觀察及關心，跌倒時多加鼓勵，讓小孩從新起來，屢敗屢試，累積經驗，終必會成功的，成長為一個強壯又經得起考驗的生命。
+                <ol class="a" type="A">
+                    <li>
+                        <b>為受壓困苦者設立自由安全的空間</b>
+                        <p>
+                            社會上有不少人面對受壓困苦的生活，無論在工作上、學業上或對人生前路，他們極需要可以舒緩壓力的方法，不少人在身體健康及情緒健康上出現問題，形成重重的壓力，產生骨牌效應，整個生命都會崩塌下來。同時，壓力不單壓垮自己，甚至連家庭、朋輩都會受到影響。有不少壓力處理失當的情況，引發家庭暴力，甚至演變成倫常慘劇。面對這些情況，社會有一定的資源或機制可以協助這些受困的人。然而，他們仍活在水深火熱之中，教會可以為這些有需要的人設立自由又安全的空間，讓他們可以傾心吐意將自己所面對困難，藉著教牧、同儕的代禱、同行及守望，讓聖靈在其中堅固信心及引導前面的方向，這上主臨在的神聖的空間是重要的，是有別於金錢緊急的支援、心理輔導及身體創傷的醫癒。
+                        </p>
+                        <p>
+                            同時，教會的群體應以基督的恩典與接納，對於那些弱勢及曾被罪惡綑綁的，讓他們可以藉著基督的恩典，能被接納，重獲新生。「你使我心裏喜樂，勝過那豐收五穀新酒的人。我必平安地躺下睡覺，因為獨有你－耶和華使我安然居住。」（詩4:7-8）
+                        </p>
+                    </li>
+                    <li>
+                        <b>為青少年一代設立思想領域的空間</b>
+                        <p>
+                            上主給教會青少年人，正如上文曾提及，近期有不少聲音指教會青年流失。然而，我們為青年人預備以愛為家的土壤，讓他們認定教會是他們信仰基礎的根本，同時，青少年人在生活、學校及社會上接觸最前線的文化衝擊、生活的節奏與及社會轉變的浪潮。他們需要有足夠的空間，可以將前線面對的挑戰與困難，與信仰及聖經真理作對話及整合，以致他們可以活在潮流文化或前線急速轉變，卻有穩固及持續的信仰反省。我們不應第一時間就以信仰來否定青少年人的價值，應設立更多對話的空間，讓教會更多欣賞年青人的創意與思維。
+                        </p>
+                        <p>
+                            教會一代又一代的更替，教會要持守的信仰，乃是活潑有生命力的信仰，可以與不同年代的信徒，一同走過人生的階段。教會應給予青少年人更多思想的空間，有人稱此為「夢」，但夢會給人虛幻不定的感覺。實在，青少年人有不少的思想領域的創新意念，只是他們將這些美好又有生命力的意見，在現實生活中未有空間可以發揮，就轉移在虛擬世界中，尋求出路或發表意見。教會可會為青少年人設立思想領域的空間，讓他們可以發現自己與上帝之間的關係，發掘自己在教會潛在價值，或是上主對個人的呼召，並且在教會發揮他們的恩賜與能力。青少年人有一天，將會成為教會的領袖，成為上主使用的僕人。這不也是我們的期待嗎?
+                        </p>
+                    </li>
+                    <li>
+                        <b>在正謬對錯中設立復和相愛的空間</b>
+                        <p>
+                            經過社會事件與疫情，有不少正謬對錯的分歧與撕裂，人與人之間充滿了不同立場與意見，使關係緊張與壁壘分明。甚至過程曾經面對因見解與立場的不同，帶來教會的分裂，有信徒從此與教會割裂。然而，我們要思想，教會並不是立場對壘的地方，乃是我們原為不同背景、不同的身份、不同經歷的人，因基督的愛與犧牲，而帶來合而為一的群體。難道我們今天的撕裂，是要將基督合一的身體再次破碎？難道我們要基督再次釘十架，叫我們可以從新合一?
+                        </p>
+                        <p>
+                            我們要悔改，從個人的主觀正謬對錯之中，悔改過來，只看見基督的復和相愛的兒女，可以在主前合而為一。教會需要設立這復和相愛的空間，教會並不是要只得一個聲音，一個見解，乃在基督真理之下，可以容納不同的聲音，彼此了解，也彼此諒解，使我們在基督裡面可以一同成長。教會可以就不同的議題，從多角去反省及討論，並且在禱告和聖經真理中，學習謙卑，願意聆聽，一同尋求上主的旨意。
+                        </p>
+                    </li>
+                </ol>
+                </p>
+            </li>
+            <li>
+                <b>「生命」-- 為每顆生命成長而感恩</b>
+                <p>
+                    教會是一個生命有機體，是一個不斷成長的生命群體。因此，成長是必然的事，成長的相反就是萎縮。教會的成長，就是個別信徒生命的成長，藉此互相的激勵，使整個群體都成長起來。正如每年教會都舉行差傳年會，目的是藉專題的信息、宣教士的經歷或短宣參加者的生命見證，來激勵整體信徒對宣教的火熱及回應。同樣地，教會中每一個信徒生命的成長與經歷，都可以感染其他信徒屬靈生命的成長，聖經真理的尋索、彼此代禱懇求、同行同在的扶持等。有時候，這生命成長不一定要經過大型的培靈或奮興才會出現，卻在生活細節上看見上主的作為，對生命的呼召，處處顯出上主的榮美。
+                </p>
+                <ol class="a" type="A">
+                    <li>
+                        <b>尊重每顆生命有獨特召命</b>
+                        <p>
+                            近年教會有不少年青一代，在不同信仰領域上，感受到上主的呼召及帶領，在神學院進修，有攻讀神學學位的，也有進修婚姻與家庭輔導的，他們都是受到上主的感召，願意委身在事奉之中。比起昔日教會只支持全時間神學學位訓練，我們要學習尊重每顆生命，在上主的引領與呼召，都有獨特的召命。在聖經中新約使徒，也有將福音傳予外邦的保羅，成為初期教會的另類使徒。教會亦有信徒參與不同福音機構的工作，他們都是在天國福音事工，蒙上主的呼召，努力不懈地接觸特定的肢體，為要得著這些生命。是的，多元的福音工作，是後現代的福音使命的現象，有時候會感到百花齊放。教會可會因條例體制而侷限了對這些蒙召的生命的支持？還是我們願意因尊重每顆蒙召的生命，願意打開我們有限的視野，使上主的福音可以更寬廣的傳播?
+                        </p>
+                    </li>
+                    <li>
+                        <b>看重每個生命的成長時間</b>
+                        <p>
+                            雖然教會已制定信徒生命成長的路線圖，不過，每一個信徒的成長的時間，都有不定的因素。有些信徒需要一段較長的時候，或因應人生的經歷，才可以成長過來，或是人生有逆轉的新方向，就如先前提及保羅的生命。腓3:7-8「只是我先前以為對我是有益的，我現在因基督的緣故而當作是有損的。不但如此，我已把萬事當作是有損的，因我以認識我主基督耶穌為至寶。」也有些信徒在年青時，已確定召命，願意一生的跟隨基督。所以，作為牧者或教會領袖，需要留意每顆生命的成長，他們的時間都不同，猶如不同的果子或植物，成熟及收成期都有不同。然而，上主在每顆生命都有祂的計劃。教會是否可以按照上主的旨意，適當地培育生命，建立生命成長的週期，並且適時的收割。否則，有很多已熟的莊稼，就會因為未能及時收割，而損失了收割的機會。
+                        </p>
+                    </li>
+                    <li>
+                        <b>感恩每個生命能顯主榮美</b>
+                        <p>
+                            以賽亞書60:21下「他們是我栽的苗，是我手的工作，為了彰顯我的榮耀。」每顆生命的成長都有上主的美意。每個生命都是上主奇妙的作為。因此，在教會中，我們要為信徒生命的成長而感恩，也要知道每顆生命都彰顯上主的榮美。所以，教會中要多為信徒生命的成長，作出見證的分享，也要為此而感謝上主。
+                        </p>
+                        <p>
+                            雖然，在成長過程會遇到困難，挑戰與及逆境，但藉信徒間的守望、扶持，可以渡過困難，見證一顆一顆生命的成長，歸榮耀給上主。一方面這是一個長時間守望的工作，如農夫等待農作物、土產收成時的歡呼感恩。同時，也可以在定期的分享及經歷中，看見上主的帶領。教會在每年的歲終感恩見證分享，或是在外展社會服侍後的經驗分享、短宣後的見證分享等，都見證了信徒在信仰生命與實踐，踏上成長路的里程碑。教會不應對分享見證感到厭煩或認為是多餘事務，實在見證分享，乃是數算上主的作為，祂的美善與大能，正正陶造每個信徒的生命成長。
+                        </p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <p class="a3-fontsize-small">(2024 年 11 月)</p>
+    </div>
+</div>
